@@ -6,10 +6,8 @@
     <meta charset="UTF-8">
     <title>Catálogo de Software de Diseño</title>
 
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    
     <style>
         body {
             background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
@@ -63,7 +61,7 @@
                 $sql = "SELECT * FROM softwares";
                 $res = $conn->query($sql);
 
-                while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
+                while ($row = $res->fetch(PDO::FETCH_ASSOC)):
                 ?>
                 <tr>
                     <td><?= $row['nombre'] ?></td>
@@ -78,7 +76,7 @@
         </table>
     </div>
 
-    
+    <!-- Agregar software -->
     <div class="card-custom mb-5">
         <h4 class="mb-3">Agregar nuevo software</h4>
 
@@ -93,7 +91,7 @@
         </form>
     </div>
 
-    
+    <!-- Video -->
     <h3 class="title text-center mb-3">Recomendaciones de Software</h3>
 
     <div class="ratio ratio-16x9 mb-5">
@@ -104,6 +102,8 @@
 
 </body>
 </html>
+
+
 
 
 
