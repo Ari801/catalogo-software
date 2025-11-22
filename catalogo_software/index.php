@@ -60,7 +60,7 @@
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT * FROM catalogo";
+                $sql = "SELECT * FROM softwares";
                 $res = $conn->query($sql);
 
                 while($row = $res->fetch_assoc()):
@@ -104,4 +104,5 @@
 
 </body>
 </html>
+
 
