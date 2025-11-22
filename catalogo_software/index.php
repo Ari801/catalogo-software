@@ -63,7 +63,7 @@
                 $sql = "SELECT * FROM softwares";
                 $res = $conn->query($sql);
 
-                while($row = $res->fetch_assoc()):
+                while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
                 ?>
                 <tr>
                     <td><?= $row['nombre'] ?></td>
@@ -104,5 +104,6 @@
 
 </body>
 </html>
+
 
 
