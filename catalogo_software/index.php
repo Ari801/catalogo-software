@@ -10,7 +10,7 @@
 
     <style>
         body {
-            background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+            background: linear-gradient(120deg, #f8c8dc, #ffe3ec);
             min-height: 100vh;
         }
         .card-custom {
@@ -22,7 +22,7 @@
         }
         .title {
             font-weight: 700;
-            color: #003d73;
+            color: #a30059;
         }
         table {
             background: white;
@@ -30,8 +30,24 @@
             overflow: hidden;
         }
         th {
-            background: #003d73 !important;
+            background: #a30059 !important;
             color: white !important;
+        }
+        .btn-primary {
+            background-color: #d63384;
+            border-color: #d63384;
+        }
+        .btn-primary:hover {
+            background-color: #b82a6d;
+        }
+        .btn-warning {
+            background-color: #ff9fba;
+            border-color: #ff9fba;
+            color: white;
+        }
+        .btn-danger {
+            background-color: #ff4d6d;
+            border-color: #ff4d6d;
         }
     </style>
 </head>
@@ -59,9 +75,9 @@
             <tbody>
                 <?php
                 $sql = "SELECT * FROM softwares";
-                $res = $conn->query($sql);
+                $stmt = $conn->query($sql);
 
-                while ($row = $res->fetch(PDO::FETCH_ASSOC)):
+                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)):
                 ?>
                 <tr>
                     <td><?= $row['nombre'] ?></td>
@@ -76,7 +92,7 @@
         </table>
     </div>
 
-    <!-- Agregar software -->
+    <!-- Formulario -->
     <div class="card-custom mb-5">
         <h4 class="mb-3">Agregar nuevo software</h4>
 
@@ -95,13 +111,15 @@
     <h3 class="title text-center mb-3">Recomendaciones de Software</h3>
 
     <div class="ratio ratio-16x9 mb-5">
-        <iframe src="https://www.youtube.com/embed/lMqefxItqKM" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/VvJHqnhrRkA" allowfullscreen></iframe>
     </div>
 
 </div>
 
 </body>
 </html>
+
+
 
 
 
